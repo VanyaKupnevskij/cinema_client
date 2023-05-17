@@ -1,14 +1,23 @@
+@import './mixins.scss';
+
 $black_color: #162023;
-$white_color: #f2f2f2;
+$white_color: #fbfbfb;
 $green_color: #27ae60;
-$red_color: #eb5757;
+$red_color: #fa3f61;
 $blue_color: #0e81b4;
 
-$border_color: #2f3739;
+$primary_color: #d8c1fd;
+$secondary_color: #ffa7b7;
+$background_color: #fafafa;
+$panel_color: #fcfaff;
+$panel_dark_color: #f5ebff;
 
-$base_box_shadow: 0px 5px 12px rgba(0, 0, 0, 0.25);
+$box_shadow: 0px 4px 8px rgba($black_color, 0.08);
 
-$base_border_radius: 16px;
+$border_radius: 10px;
+$border: min(pxToRem(2px), 2px) solid $primary_color;
 
-$base_font: 'Inter', sans-serif;
-$second_font: 'Poppins', sans-serif;
+$base_font: 'Montserrat', sans-serif;
+
+$container_max_width: pxToRem(1100px);
+$gap_block: pxToRem(20px);
