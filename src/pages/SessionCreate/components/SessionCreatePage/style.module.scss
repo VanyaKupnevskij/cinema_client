@@ -1,0 +1,29 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  max-width: $container_max_width;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: $gap_block;
+}
+
+.block {
+  padding: pxToRem(25px);
+  display: flex;
+  justify-content: center;
+}
+
+.block_component {
+  background-color: $panel_color;
+}
