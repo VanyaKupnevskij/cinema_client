@@ -6,7 +6,7 @@ function CinemaPage() {
     <div className={globalStyles.wrapper}>
       <div className={globalStyles.container}>
         <div className={globalStyles.inner}>
-          <div className={`${styles.block} ${styles.block_head}`}>Block List cinemas</div>
+          <div className={`${styles.block} ${styles.block_head}`}>Block Title cinema</div>
           <div className={styles.block}>Block info cinemas</div>
           <div className={styles.block}>Block list sessions</div>
         </div>
