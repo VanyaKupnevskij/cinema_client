@@ -8,12 +8,14 @@
   &_controls {
     display: flex;
     justify-content: space-around;
+    gap: pxToRem(20px);
   }
   &_link {
-    width: 30%;
+    min-width: 30%;
+    width: fit-content;
     margin: 0;
     padding: pxToRem(16px) pxToRem(20px);
-    background-color: $panel_color;
+    background-color: $panel_dark_color;
     color: $black_color;
     border: none;
     border-radius: $border_radius;

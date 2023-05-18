@@ -3,15 +3,15 @@ import styles from './style.module.scss';
 import { COLORS } from '../../styles/variablesJs';
 import styled from 'styled-components';
 
-function Button({ className, isLink = false, linkPath = '/', children, handleClick }) {
+function Button({ style, className, isLink = false, linkPath = '/', children, handleClick }) {
   const _className = `${styles.button} ${className}`;
 
   return isLink ? (
-    <Link to={linkPath} className={_className} onClick={handleClick}>
+    <Link to={linkPath} className={_className} onClick={handleClick} style={style}>
       {children}
     </Link>
   ) : (
-    <button className={_className} onClick={handleClick}>
+    <button className={_className} onClick={handleClick} style={style}>
       {children}
     </button>
   );
