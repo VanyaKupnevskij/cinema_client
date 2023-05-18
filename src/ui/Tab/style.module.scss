@@ -1,2 +1,54 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
+
+.tab {
+  width: 100%;
+  animation: fadeEffect 1s;
+
+  &_controls {
+    display: flex;
+    justify-content: space-around;
+  }
+  &_link {
+    width: 30%;
+    margin: 0;
+    padding: pxToRem(16px) pxToRem(20px);
+    background-color: $panel_color;
+    color: $black_color;
+    border: none;
+    border-radius: $border_radius;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    appearance: none;
+    transition: all 150ms ease;
+
+    &:hover {
+      background-color: $primary_color;
+    }
+    &__active {
+      background-color: $primary_dark_color;
+    }
+  }
+
+  &_inner {
+  }
+  &_content {
+    display: none;
+    animation: fadeEffect 1s;
+
+    &__active {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
