@@ -1,7 +1,14 @@
 import styles from './style.module.scss';
 
-function Component2() {
-  return <></>;
+function TextInput({ style, className, name, placeholder = '', label }) {
+  return (
+    <div className={styles.root}>
+      <input className={styles.input} type="text" name={name} placeholder={placeholder} />
+      <label className={styles.label} htmlFor={name}>
+        {label}
+      </label>
+    </div>
+  );
 }
 
-export default Component2;
+export default TextInput;

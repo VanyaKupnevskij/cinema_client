@@ -3,6 +3,7 @@ import globalStyles from '../../../../styles/global.module.scss';
 import Tab from '../../../../ui/Tab';
 import { useEffect, useState } from 'react';
 import Table from '../../../../ui/Table';
+import TextInput from '../../../../ui/TextInput';
 
 function CinemaPage() {
   const [titles, setTitles] = useState(['Прибутки', 'Зали']);
@@ -37,7 +38,11 @@ function CinemaPage() {
           <div className={styles.block}>
             <Tab titles={titles} contents={contents} />
           </div>
-          <div className={styles.block}>Block list sessions</div>
+          <div className={styles.block}>
+            <TextInput name={'name'} placeholder={'Enter name cinema'} label={'Name cinema'} />
+            <TextInput name={'name'} placeholder={'Enter name cinema'} label={'Name cinema'} />
+            <TextInput name={'name'} placeholder={'Enter name cinema'} label={'Name cinema'} />
+          </div>
         </div>
       </div>
     </div>
