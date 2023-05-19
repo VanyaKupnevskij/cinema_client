@@ -4,10 +4,12 @@ import Tab from '../../../../ui/Tab';
 import { useEffect, useState } from 'react';
 import Table from '../../../../ui/Table';
 import TextInput from '../../../../ui/TextInput';
+import SelectInput from '../../../../ui/SelectInput';
 
 function CinemaPage() {
   const [titles, setTitles] = useState(['Прибутки', 'Зали']);
   const [contents, setContents] = useState([]);
+  const [films, setFilms] = useState([]);
 
   useEffect(() => {
     const titlesIncome = ['Дата', 'Прибуток'];
@@ -24,6 +26,14 @@ function CinemaPage() {
       ['3', 'PREMIUM', '15'],
     ];
 
+    const listFilms = [
+      { key: 'lsfe8i8rj', value: 'Avatar' },
+      { key: 'sefsee4hy', value: 'Story Toy 3' },
+      { key: 'Jl45ie1fe', value: 'Super car' },
+    ];
+
+    setFilms(listFilms);
+
     setContents([
       <Table style={{ marginTop: '1.5rem' }} titles={titlesIncome} contents={listIncome} />,
       <Table style={{ marginTop: '1.5rem' }} titles={titlesHalls} contents={listHalls} />,
@@ -39,9 +49,14 @@ function CinemaPage() {
             <Tab titles={titles} contents={contents} />
           </div>
           <div className={styles.block}>
-            <TextInput name={'name'} placeholder={'Enter name cinema'} label={'Name cinema'} />
-            <TextInput name={'name'} placeholder={'Enter name cinema'} label={'Name cinema'} />
-            <TextInput name={'name'} placeholder={'Enter name cinema'} label={'Name cinema'} />
+            <SelectInput
+              options={films}
+              name={'Film'}
+              placeholder={'Select film...'}
+              label={'Film'}
+            />
+            <TextInput name={'name'} placeholder={'Enter name cinema...'} label={'Name cinema'} />
+            <TextInput name={'ganre'} placeholder={'Enter ganre cinema...'} label={'Ganre'} />
           </div>
         </div>
       </div>
