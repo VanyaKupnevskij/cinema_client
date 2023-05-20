@@ -1,6 +1,7 @@
 import styles from './style.module.scss';
 import globalStyles from '../../../../styles/global.module.scss';
 import Button, { SecondaryButton } from '../../../../ui/Button';
+import Card from '../../../../components/Card';
 
 function MainPage() {
   return (
@@ -12,7 +13,9 @@ function MainPage() {
               Додати кінотеатр
             </Button>
           </div>
-          <div className={`${styles.block} ${styles.block_component}`}>Block List cinemas</div>
+          <div className={`${styles.block} ${styles.block_component}`}>
+            <Card />
+          </div>
         </div>
       </div>
     </div>

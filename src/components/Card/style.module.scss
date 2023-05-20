@@ -1,2 +1,33 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: pxToRem(15px) pxToRem(40px);
+  width: 100%;
+
+  border-radius: $border_radius;
+  background-color: $background_color;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    box-shadow: $box_shadow;
+  }
+}
+
+.main_info {
+  h3 {
+    margin: 0;
+
+    font-size: pxToRem(20px);
+    font-weight: 500;
+  }
+
+  span {
+    font-size: pxToRem(14px);
+    font-weight: 400;
+  }
+}
