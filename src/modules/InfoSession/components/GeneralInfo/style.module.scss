@@ -12,31 +12,3 @@
 
   background-color: $background_color;
 }
-
-.title {
-  margin: 0;
-  align-self: center;
-
-  text-transform: uppercase;
-  font-size: pxToRem(32px);
-  font-weight: 300;
-}
-
-.control {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  &_date {
-    display: flex;
-    align-items: center;
-    gap: pxToRem(20px);
-
-    span {
-      font-weight: 500;
-    }
-  }
-
-  &_create {
-  }
-}

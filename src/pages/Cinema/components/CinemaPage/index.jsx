@@ -3,7 +3,7 @@ import globalStyles from '../../../../styles/global.module.scss';
 import Tab from '../../../../ui/Tab';
 import { useEffect, useState } from 'react';
 import Table from '../../../../ui/Table';
-import ModuleMain from '../../../../modules/InfoSession/components/ModuleMain';
+import ListSessions from '../../../../modules/ListSessions';
 
 function CinemaPage() {
   const [titles, setTitles] = useState([]);
@@ -41,7 +41,7 @@ function CinemaPage() {
             <Tab titles={titles} contents={contents} />
           </div>
           <div className={styles.block}>
-            <ModuleMain />
+            <ListSessions />
           </div>
         </div>
       </div>
