@@ -4,21 +4,38 @@
 .root {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: pxToRem(20px);
   align-items: center;
   padding: pxToRem(15px) pxToRem(40px);
-  width: 100%;
 
   border-radius: $border_radius;
   background-color: $background_color;
+
+  text-transform: uppercase;
 
   transition: all 200ms ease;
 
   &:hover {
     box-shadow: $box_shadow;
   }
+
+  .info {
+    max-width: pxToRem(310px);
+
+    span + span {
+      margin-left: pxToRem(7px);
+    }
+  }
 }
 
 .main_info {
+  flex-grow: 1;
+  flex-basis: pxToRem(250px);
+  max-width: pxToRem(320px);
+
+  cursor: pointer;
+
   h3 {
     margin: 0;
 
@@ -27,7 +44,42 @@
   }
 
   span {
-    font-size: pxToRem(14px);
+    font-size: pxToRem(12px);
     font-weight: 400;
+  }
+}
+
+.delete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_icon {
+    display: none;
+    height: pxToRem(20px);
+  }
+
+  &_caption {
+    display: inline;
+  }
+
+  @media (max-width: 770px) {
+    padding: pxToRem(10px);
+    width: min(100%, pxToRem(100px));
+
+    &_icon {
+      display: inline;
+    }
+
+    &_caption {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1020px) {
+    &_icon {
+      display: inline;
+      margin-right: pxToRem(20px);
+    }
   }
 }

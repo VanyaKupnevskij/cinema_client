@@ -2,13 +2,13 @@
 @import './mixins.scss';
 
 .wrapper {
-  min-height: 100vh;
+  min-height: calc(100vh - pxToRem(20px));
   width: 100%;
 }
 
 .container {
   max-width: $container_max_width;
-  min-height: 100vh;
+  min-height: calc(100vh - pxToRem(20px));
   margin: 0 auto;
 }
 
