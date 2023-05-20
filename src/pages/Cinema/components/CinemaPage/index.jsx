@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Table from '../../../../ui/Table';
 import TextInput from '../../../../ui/TextInput';
 import SelectInput from '../../../../ui/SelectInput';
+import DatePicker from '../../../../ui/DatePicker';
 
 function CinemaPage() {
   const [titles, setTitles] = useState(['Прибутки', 'Зали']);
@@ -49,6 +50,7 @@ function CinemaPage() {
             <Tab titles={titles} contents={contents} />
           </div>
           <div className={styles.block}>
+            <DatePicker min={new Date(Date.now())} init={new Date(Date.now())} />
             <SelectInput
               options={films}
               name={'Film'}
