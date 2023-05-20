@@ -3,6 +3,8 @@
 
 .table {
   display: block;
+  overflow: hidden;
+
   width: min(100%, pxToRem(500px));
   padding: pxToRem(20px);
   border: $border;
@@ -50,6 +52,8 @@
   }
 
   tbody {
+    overflow: auto;
+    max-height: pxToRem(200px);
     display: flex;
     flex-direction: column;
     gap: pxToRem(5px);

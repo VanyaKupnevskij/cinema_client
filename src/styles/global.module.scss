@@ -23,3 +23,16 @@ a {
   gap: $gap_block;
   margin-top: pxToRem(20px);
 }
+
+*::-webkit-scrollbar {
+  width: max(pxToRem(4px), 2px);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $primary_color;
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
