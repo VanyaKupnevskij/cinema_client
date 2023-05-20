@@ -11,6 +11,7 @@ function CinemaPage() {
   const [titles, setTitles] = useState(['Прибутки', 'Зали']);
   const [contents, setContents] = useState([]);
   const [films, setFilms] = useState([]);
+  const [minDate, setMinDate] = useState('');
 
   useEffect(() => {
     const titlesIncome = ['Дата', 'Прибуток'];
@@ -35,6 +36,11 @@ function CinemaPage() {
 
     setFilms(listFilms);
 
+    const date = new Date(Date.now());
+    const dateFormated =
+      date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getDate();
+    setMinDate(dateFormated);
+
     setContents([
       <Table style={{ marginTop: '1.5rem' }} titles={titlesIncome} contents={listIncome} />,
       <Table style={{ marginTop: '1.5rem' }} titles={titlesHalls} contents={listHalls} />,
@@ -50,7 +56,7 @@ function CinemaPage() {
             <Tab titles={titles} contents={contents} />
           </div>
           <div className={styles.block}>
-            <DatePicker min={new Date(Date.now())} init={new Date(Date.now())} />
+            <DatePicker min={minDate} init={minDate} name={'date'} label={'Date'} />
             <SelectInput
               options={films}
               name={'Film'}
