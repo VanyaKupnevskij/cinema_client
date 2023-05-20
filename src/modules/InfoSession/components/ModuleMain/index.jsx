@@ -11,7 +11,7 @@ function ModuleMain() {
       {
         linkPath: '/film/348ljskd',
         title: 'Форсаж 10',
-        subtitle: 'Боевик',
+        subtitle: 'Жанр: Боевик',
         info_1: 'Місця: 4/30',
         info_2: (
           <>
@@ -22,7 +22,7 @@ function ModuleMain() {
       {
         linkPath: '/film/348ljskd',
         title: 'Історя іграшок 3',
-        subtitle: 'Пригоди',
+        subtitle: 'Жанр: Пригоди',
         info_1: 'Місця: 10/15',
         info_2: (
           <>
@@ -33,7 +33,7 @@ function ModuleMain() {
       {
         linkPath: '/film/348ljskd',
         title: 'Аватар Шлях води',
-        subtitle: 'Научна фантастика',
+        subtitle: 'Жанр: Научна фантастика',
         info_1: 'Місця: 1/20',
         info_2: (
           <>
@@ -46,9 +46,13 @@ function ModuleMain() {
     setSessions(mockSessions);
   }, []);
 
+  function handleChangeDate(newDate) {
+    alert(newDate);
+  }
+
   return (
     <div className={styles.root}>
-      <GeneralInfo />
+      <GeneralInfo onChangeDate={handleChangeDate} />
       <ListCards datas={sessions} />
     </div>
   );
