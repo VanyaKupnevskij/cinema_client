@@ -10,34 +10,19 @@ function MainPage() {
   useEffect(() => {
     const mockCinemas = [
       {
+        linkPath: '/cinema/348ljskd',
         title: 'Назва Кінотеатру №1',
         subtitle: 'вул. Мозаїка',
-        info_1: 'Місця: 4/30',
-        info_2: (
-          <>
-            Ціна: <b>{15} $</b>
-          </>
-        ),
       },
       {
+        linkPath: '/cinema/348ljskd',
         title: 'Назва Кінотеатру',
         subtitle: 'вул. Гвоздарьова',
-        info_1: 'Місця: 10/15',
-        info_2: (
-          <>
-            Ціна: <b>{12} $</b>
-          </>
-        ),
       },
       {
+        linkPath: '/cinema/348ljskd',
         title: 'Супер Кіно',
         subtitle: 'вул. Бажана',
-        info_1: 'Місця: 1/20',
-        info_2: (
-          <>
-            Ціна: <b>{10} $</b>
-          </>
-        ),
       },
     ];
 

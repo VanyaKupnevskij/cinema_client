@@ -1,6 +1,11 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .wrapper {
   min-height: calc(100vh - pxToRem(20px));
   width: 100%;

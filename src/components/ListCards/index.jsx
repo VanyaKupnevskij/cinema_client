@@ -6,15 +6,14 @@ function ListCards({ datas }) {
     alert('delete');
   }
 
-  function handleClick() {
-    alert('click');
-  }
+  function handleClick() {}
 
   return (
     <div className={styles.root}>
       {datas.map((data, id) => (
         <Card
           key={id}
+          linkPath={data.linkPath}
           title={data.title}
           subtitle={data.subtitle}
           info_1={data.info_1}

@@ -21,8 +21,13 @@
   }
 
   .info {
-    max-width: pxToRem(310px);
+    display: flex;
+    flex-grow: 1;
+    max-width: pxToRem(300px);
 
+    span {
+      flex-basis: 150px;
+    }
     span + span {
       margin-left: pxToRem(7px);
     }

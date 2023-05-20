@@ -3,15 +3,11 @@ import globalStyles from '../../../../styles/global.module.scss';
 import Tab from '../../../../ui/Tab';
 import { useEffect, useState } from 'react';
 import Table from '../../../../ui/Table';
-import TextInput from '../../../../ui/TextInput';
-import SelectInput from '../../../../ui/SelectInput';
-import DatePicker from '../../../../ui/DatePicker';
+import ModuleMain from '../../../../modules/InfoSession/components/ModuleMain';
 
 function CinemaPage() {
-  const [titles, setTitles] = useState(['Прибутки', 'Зали']);
+  const [titles, setTitles] = useState([]);
   const [contents, setContents] = useState([]);
-  const [films, setFilms] = useState([]);
-  const [minDate, setMinDate] = useState('');
 
   useEffect(() => {
     const titlesIncome = ['Дата', 'Прибуток'];
@@ -28,23 +24,12 @@ function CinemaPage() {
       ['3', 'PREMIUM', '15'],
     ];
 
-    const listFilms = [
-      { key: 'lsfe8i8rj', value: 'Avatar' },
-      { key: 'sefsee4hy', value: 'Story Toy 3' },
-      { key: 'Jl45ie1fe', value: 'Super car' },
-    ];
-
-    setFilms(listFilms);
-
-    const date = new Date(Date.now());
-    const dateFormated =
-      date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + date.getDate();
-    setMinDate(dateFormated);
-
     setContents([
       <Table style={{ marginTop: '1.5rem' }} titles={titlesIncome} contents={listIncome} />,
       <Table style={{ marginTop: '1.5rem' }} titles={titlesHalls} contents={listHalls} />,
     ]);
+
+    setTitles(['Прибутки', 'Зали']);
   }, []);
 
   return (
@@ -56,15 +41,7 @@ function CinemaPage() {
             <Tab titles={titles} contents={contents} />
           </div>
           <div className={styles.block}>
-            <DatePicker min={minDate} init={minDate} name={'date'} label={'Date'} />
-            <SelectInput
-              options={films}
-              name={'Film'}
-              placeholder={'Select film...'}
-              label={'Film'}
-            />
-            <TextInput name={'name'} placeholder={'Enter name cinema...'} label={'Name cinema'} />
-            <TextInput name={'ganre'} placeholder={'Enter ganre cinema...'} label={'Ganre'} />
+            <ModuleMain />
           </div>
         </div>
       </div>
