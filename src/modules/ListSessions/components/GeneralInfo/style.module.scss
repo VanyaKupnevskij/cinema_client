@@ -26,6 +26,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: pxToRem(20px);
+  flex-wrap: wrap;
 
   &_date {
     display: flex;
@@ -38,5 +40,23 @@
   }
 
   &_create {
+    text-align: center;
+  }
+
+  @media (max-width: 570px) {
+    justify-content: center;
+
+    &_date {
+      width: min(100%, pxToRem(300px));
+    }
+
+    &_create {
+      flex-basis: 100%;
+    }
+  }
+  @media (max-width: 380px) {
+    &_date span {
+      display: none;
+    }
   }
 }

@@ -1,6 +1,10 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+* {
+  box-sizing: border-box;
+}
+
 a {
   color: inherit;
   text-decoration: none;

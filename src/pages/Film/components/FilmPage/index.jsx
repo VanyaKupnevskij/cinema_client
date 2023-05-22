@@ -1,5 +1,8 @@
 import styles from './style.module.scss';
 import globalStyles from '../../../../styles/global.module.scss';
+import Button from '../../../../ui/Button';
+
+import InfoSession from '../../../../modules/InfoSession';
 
 function FilmPage() {
   return (
@@ -7,9 +10,13 @@ function FilmPage() {
       <div className={globalStyles.container}>
         <div className={globalStyles.inner}>
           <div className={styles.block}>
-            <span>Block Buttons</span>
+            <Button isLink linkPath="/film/create">
+              Додати фільм
+            </Button>
           </div>
-          <div className={`${styles.block} ${styles.block_component}`}>Block Info Film</div>
+          <div className={`${styles.block} ${styles.block_component}`}>
+            <InfoSession />
+          </div>
         </div>
       </div>
     </div>

@@ -5,6 +5,7 @@
   position: relative;
   margin: pxToRem(2px);
   margin-top: pxToRem(5px);
+  width: pxToRem(200px);
 }
 
 .label {
@@ -22,11 +23,11 @@
 
 .input {
   appearance: none;
-  min-width: pxToRem(200px);
+  padding: pxToRem(13px) pxToRem(15px);
+  width: 100%;
   background-color: $background_color;
   color: $black_color;
   outline: none;
   border: $border;
   border-radius: $border_radius;
-  padding: pxToRem(13px) pxToRem(15px);
 }

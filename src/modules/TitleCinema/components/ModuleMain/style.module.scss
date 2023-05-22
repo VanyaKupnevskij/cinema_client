@@ -18,8 +18,24 @@
 }
 
 .adress {
+  position: relative;
   margin-top: pxToRem(30px);
+  padding: pxToRem(5px) 0;
+  padding-left: pxToRem(30px);
 
   text-transform: uppercase;
   font-size: pxToRem(14px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../images/location-pin.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: pxToRem(19px);
+  }
 }
